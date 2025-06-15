@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Обо мне — Сайт воспитателя</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html" class="logo-link">Сайт воспитателя</a></h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="legal.html">Нормативные акты</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="info.html" class="active">Об авторе</a></li>
+          <li><a href="method.html">Методические рекомендации</a></li>
+          <li><a href="create.html">Наше творчество</a></li>
+          <li><a href="https://edu.tatar.ru/drozhanoye/poiu">Новости</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="content-wrapper">
+        <section class="about-me">
+        <h2>Обо мне</h2>
+        <div class="about-container">
+            <div class="about-text">
+            <p>Меня зовут <strong>Басырова Инга Валерьевна</strong>. Я работаю воспитателем более <strong>15 лет</strong> и каждый день стремлюсь сделать мир ребёнка добрее, интереснее и развивающим.</p>
+            <p>В своей работе я использую современные подходы, уделяю внимание индивидуальному развитию каждого ребёнка, активно работаю с родителями и коллегами.</p>
+            </div>
+            <div class="about-image">
+            <img src="media/yulya2.jpg" alt="Воспитатель" class="classroom-photo">
+            </div>
+        </div>
+        </section>
+
+        <section class="qualifications">
+        <h2>Квалификация и образование</h2>
+        <ul>
+            <li>«Казанский педагогический колледж», квалификация «Воспитатель детей дошкольного возраста, руководитель физического воспитания», 2008</li>
+            <li>Участие в республиканских и всероссийских конференциях</li>
+            <li>Курсы повышения квалификации </li>
+            <li>"Современное дошкольное образование: основные тенденции и перспективы развития"</li>
+            <li>“Инклюзивное образование:  доступность, качество и эффективность. Специфика подходов и приёмы в работе с детьми с ОВЗ дошкольного возраста”, 2018г, г.Казань, НОУ ДПО «Центр социально-гуманитарного образования»</li>
+            <li>"Деятельность руководителя дошкольной образовательной организации в условиях введения и реализации ФГОС ДО"</li>
+        </ul>
+        </section>
+
+        <section class="documents">
+        <h2>Дипломы и сертификаты</h2>
+        <div class="gallery-grid">
+            <img src="photos/diploma1.jpg" alt="Диплом 1" onclick="openModal(this.src)">
+            <img src="photos/diploma2.jpg" alt="Диплом 2" onclick="openModal(this.src)">
+            <img src="photos/diploma3.jpg" alt="Диплом 3" onclick="openModal(this.src)">
+            <img src="photos/certificate1.jpg" alt="Сертификат 1" onclick="openModal(this.src)">
+        </div>
+        </section>
+
+        <section class="principles">
+        <h2>Педагогическое кредо</h2>
+        <p>«Каждый ребёнок уникален, и моя задача — помочь ему раскрыть свой потенциал, сделать первые шаги к самостоятельности и уверенности в себе».</p>
+        </section>
+    </div>
+  </main>
+
+  <div id="imgModal" class="modal" onclick="this.style.display='none'">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Басырова И.В. | Сайт воспитателя</p>
+  </footer>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("imgModal").style.display = "block";
+    }
+
+    document.querySelector(".close-modal").onclick = () => {
+      document.getElementById("imgModal").style.display = "none";
+    };
+  </script>
+</body>
+</html>
